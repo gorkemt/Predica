@@ -1,0 +1,18 @@
+{
+  "name": "Events",
+  "version": "0.0.1",
+  "description": "Events",
+  "main": "server.js",
+  "author": {
+    "name": "Gorkem Tolan",
+    "email": "gorkemt@yahoo.com"
+  },
+  "dependencies": {
+    "vash": "~0.7.12-1",
+    "express": "~4.4.3",
+    "mongodb": "~1.4.7",
+    "angular": "~1.2.19",
+    "querystring": "~0.2.0",
+    "body-parser": "~1.6.2"
+  }
+}

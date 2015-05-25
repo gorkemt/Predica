@@ -1,0 +1,23 @@
+<div id={{e.eventId}} style="width:500px;float:left;box-shadow: 5px 5px 5px #000000;margin-left:50px;margin-top:20px;">
+<label>{{e.eventName}}</label>
+<div id="EventID_1_Chart" style="margin:10px;float:left;width:500px;background-color:#fbfbfb;padding:10px;">  
+	<div id='xt_1_{{e._id}}' style="margin-top:5px; width:1px; height:50px;background-color:#3db8ff;">
+		<div id='team1win_{{e._id}}' style="width:50px; margin-left:380px;float:left;">
+			<span ng-change='updateWinPercent(this.parent.id,100)' ng-model='winnerRate'>{{e.team1win*100}}</span>
+		</div>
+		<div style="background-color:#b148a7; width:50px;margin-left:430px;height:50px;">
+			{{e.team1}}
+			<button id='btn_1_{{e._id}}' ng-click="updateVote(1,e._id)" >{{e.team1}}</button>
+		</div>
+	</div>
+	<div id='xt_2_{{e._id}}' style="margin-top:5px; width:1px; height:50px;background-color:#3db8ff;">
+		<div id='team2win_{{e._id}}' style="width:50px; margin-left:380px;float:left;">
+			<span>{{e.team2win*100}}</span>
+		</div>
+		<div style="background-color:#b148a7; width:50px;margin-left:430px;height:50px;">
+			{{e.team2}}
+			<button id='btn_2_{{e._id}}' ng-click="updateVote(2,e._id)">{{e.team2}}</button>
+		</div>
+	</div>
+</div>
+</div>

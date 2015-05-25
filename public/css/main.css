@@ -1,0 +1,22 @@
+.btn{  background-color:#0467AC;  width:130px;  display:inline-block;}
+.btnLabel{  margin-left:40px;}
+.graph{  margin-top:10px;  
+	width:1px;  
+	height:50px;  
+	background-color:#3db8ff;
+	transform-origin:0% 0%;  
+	animation:mymove 5s 1;  
+	-webkit-animation: mymove 5s 1;  
+	animation-fill-mode: forwards;  
+	-webkit-animation-fill-mode: forwards; 
+	-webkit-transform-origin:0% 0%; 
+	position:relative;  }
+	/*Safari and Chrome*/
+	@-webkit-keyframes mymove {  
+		from {-webkit-transform:scaleX(1);}    
+		to {-webkit-transform:scaleX(200);}
+		}
+	@keyframes mymove {  
+		from {transform:scaleX(1);}    
+		to {transform:scaleX(200);}
+	}

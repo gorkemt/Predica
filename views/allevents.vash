@@ -1,0 +1,74 @@
+<html><head>
+<script src="/scripts/jquery-2.1.1.js"></script> 
+<LINK href="../css/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://js.arcgis.com/3.10/"></script>
+		<title>@model.title</title>
+		
+		<script type="text/javascript">
+			 var map;
+			  require(["esri/map", "dojo/domReady!"], function(Map) { 
+				map = new Map("mapDiv", {
+				  center: [-56.049, 38.485],
+				  zoom: 3,
+				  basemap: "streets"
+				});
+			  });
+		</script>
+</head>
+<body>
+		<div id="mainDiv" style="background-color:#d5d5d5;height:100%">
+		@model.events.forEach(function(event,i){
+			
+		<div id=@event.eventId style="width:500px;float:left;box-shadow: 5px 5px 5px #000000;">
+			<label>@event.eventName</label>
+			<div id="EventID_1_Chart" style="margin:10px;float:left;width:500px;background-color:#fbfbfb;padding:10px;">  
+				<div id='@("xt_"+ @event.eventId+"_1")' style="margin-top:5px; width:1px; height:50px;background-color:#3db8ff;">
+					<div style="width:50px; margin-left:380px;float:left;">
+						%@(@event.team1win*100)
+					</div>
+					<div style="background-color:#b148a7; width:50px;margin-left:430px;height:50px;">
+						@event.team1
+						<button id='@("btn_" + @event.eventId+"_"+@i)' >@event.team1</button>
+					</div>
+				</div>
+				
+				<div id='@("xt_"+ @event.eventId+"_2")' style="margin-top:5px; width:1px; height:50px;background-color:#3db8ff;">
+					<div style="width:50px; margin-left:380px;float:left;">
+						%@(@event.team2win*100)
+					</div>
+					<div style="background-color:#b148a7; width:50px;margin-left:430px;height:50px;">
+						@event.team2
+					</div>
+				</div>
+				
+				<script type="text/javascript">
+					$('@("#xt_" + @event.eventId+"_1")').animate({
+					    width: "@(@event.team1win*75)%"
+					  }, 3000 );
+
+					$('@("#xt_" + @event.eventId+"_2")').animate({
+					    width: "@(@event.team2win*75)%"
+					  }, 3000 );
+				</script>
+			</div>  
+		</div>
+		
+	})
+	</div>  
+	<div style="display:inline-block;float:left">
+		<div style="width:100px;height:100px;background-color:blue;"></div>
+		<div style="width:100px;height:100px;background-color:red"></div>
+		<div style="width:100px;height:100px;background-color:yellow"></div>
+	</div>
+		
+		<script type="text/javascript">
+			//$("#btnLabel_1").text("Ali");
+			
+		</script>
+	
+	<div id="mapDiv"></div>
+</body>
+</html>

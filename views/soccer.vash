@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="soccerViewer">
+	<head>
+		<title>Soccer Events</title>
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
+		<script src="/scripts/jquery-2.1.1.js"></script> 
+		<script src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+		<script src="/js/soccerViewer.js"></script>
+		<script>
+			
+			/*setTimeout(function(){rep();},5000);
+			var rep = function(){
+				alert('hi');
+				setTimeout(function(){rep();},5000);
+			}*/
+		</script>
+	<head>
+	<body>
+		<article>
+		<div ng-controller="SoccerViewController" >
+			<div class="navbar navbar-default" >
+				<h1>PREDICA</h1>
+			</div>
+			
+			<div>
+				<div>
+					Hello, {{user}}
+					<div id="divButtonContainer" class="buttonContainer">
+						<div class="btn btn-primary btn-lg">MAIN MENU</div>
+						<div class="btn btn-primary btn-lg"><a href="/soccer/laliga" style="color:#ffffff">LA LIGA</a></div>
+						<div class="btn btn-primary btn-lg"><a href="/soccer/epl" style="color:#ffffff">PREMIER LEAGUE</a></div>
+						<div class="btn btn-primary btn-lg"><a href="/soccer/bunda" style="color:#ffffff">BUNDESLIGA</a></div>
+					</div>
+				</div>
+				
+			</div>
+			<div id="eventContainer" style="width:500px;position:relative;float:left;">
+				<div id="event" ng-repeat="e in allevents" repeat-complete="RunAnimation()">
+					<div id={{e.eventId}} class="divEventContainer">
+						<label class="eventName">{{e.eventName}}</label>
+						<div id="EventID_1_Chart" class="divChartContainer">  
+							<div id='xt_1_{{e._id}}' style="margin-top:5px; width:1px; height:50px;background-color:#3db8ff;">
+								<div id='team1win_{{e._id}}' class="divTeamWinLabel">
+									<span>{{e.team1win.toFixed(2)}}</span>
+								</div>
+								<div id='btn_1_{{e._id}}' ng-click="updateVote(1,e._id)" class="btnEventVote">
+									{{e.team1}}
+									
+								</div>
+							</div>
+							<div id='xt_2_{{e._id}}' style="margin-top:5px; width:1px; height:50px;background-color:#3db8ff;">
+								<div id='team2win_{{e._id}}' class="divTeamWinLabel">
+									<span>{{e.team2win.toFixed(2)}}</span>
+								</div>
+								<div 'btn_2_{{e._id}}' class="btnEventVote" ng-click="updateVote(2,e._id)">
+									{{e.team2}}
+								</div>
+							</div>
+						</div>
+						<div id='totalVotes_{{e._id}}'><span>Total Votes: </span><span>{{e.totalVotes}}</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</article>
+	</body>
+</html>

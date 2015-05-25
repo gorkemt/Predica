@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="loginViewer">
+	<head>Login
+	<script src="/scripts/jquery-2.1.1.js"></script> 
+		<script src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+		<script src="/js/loginViewer.js"></script>
+	</head>
+	<body ng-controller="LoginViewController">
+		<form ng-submit="login()">
+			<div>
+				<label>Username</label>
+				<input id="txtUsername" type="text" ng-model="username"/><br/>
+				<label>Password</label>
+				<input id="txtPassword" type="password" ng-model="password"/><br/>
+				<input type="Submit" value="Submit"/>
+			</div>
+			
+		</form>
+		<form ng-submit="signup()">
+			<div>
+				<label>Email</label>
+				<input id="txtEmail" type="text" ng-model="regEmail"/><br/>
+				<label>Password</label>
+				<input id="txtPassword2" type="text" ng-model="regPassword"/><br/?
+				<label>Confirm Password</label>
+				<input id="txtConfirmPassword" type="text" ng-model="regPassword2"/><br/>
+				<input type="Submit" value="Sign up"/>
+			</div>
+		</form>
+	</body>
+</html>

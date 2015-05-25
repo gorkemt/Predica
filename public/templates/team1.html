@@ -1,0 +1,16 @@
+<div id="EventID_1_Chart" style="margin:10px;float:left;width:500px;background-color:#fbfbfb;padding:10px;">  
+	<div id='xt_{{e.eventId}}_1' style="margin-top:5px; width:1px; height:50px;background-color:#3db8ff;">
+		<div id='team1win_{{e.eventId}}' style="width:50px; margin-left:380px;float:left;">
+			{{e.team1win*100}}
+		</div>
+		<div style="background-color:#b148a7; width:50px;margin-left:430px;height:50px;">
+			{{e.team1}}
+			<button id='"btn_" + {{e.eventId}}+"_"+{{$index}}' >{{e.team1}}</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+						$('"#xt_" + {{e.eventId}}+"_1"').animate({
+							width: "{{e.team1win*75}}"
+						  }, 3000 );
+	</script>
+</div>

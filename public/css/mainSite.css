@@ -1,0 +1,104 @@
+.text {
+  box-sizing: border-box;
+  width: 180px;
+  height: 30px;
+  background-image: -webkit-linear-gradient(rgba( 238, 238, 238, 0), rgba( 238, 238, 238, 0));
+  background-image: linear-gradient(rgba( 238, 238, 238, 0),rgba( 238, 238, 238, 0));
+  background-repeat: no-repeat;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 2px 2px #000000;
+  -moz-box-sizing: border-box;
+}
+.base {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  background-image: -webkit-linear-gradient(rgba( 154, 229, 102, 1), rgba( 14, 154, 42, 1));
+  background-image: linear-gradient(rgba( 154, 229, 102, 1),rgba( 14, 154, 42, 1));
+  border: 6px solid #212121;
+  border-radius: 19px;
+  box-shadow: 6px 10px 15px 0px #000000;
+  font-weight: bold;
+  text-shadow: 1px 2px 2px #000000;
+  -moz-box-sizing: border-box;
+}
+
+.base0{
+	  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  background-position: -40px -20px;
+  background-image: url("../images/buttonImages/soccer-ball.jpg"), -webkit-linear-gradient(rgba( 238, 238, 238, 1), rgba( 238, 238, 238, 1));
+  background-image: url("../images/buttonImages/soccer-ball.jpg"), linear-gradient(rgba( 238, 238, 238, 1),rgba( 238, 238, 238, 1));
+  background-repeat: no-repeat;
+  -moz-box-sizing: border-box;
+    box-shadow: 10px 10px 5px #000000;
+	
+}
+.base1{
+  box-sizing: border-box;
+  width: 300px;
+  height: 80px;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-image: -webkit-linear-gradient(rgba( 0, 0, 0, 1), rgba( 0, 0, 0, 1));
+  background-image: linear-gradient(rgba( 0, 0, 0, 1),rgba( 0, 0, 0, 1));
+  -moz-box-sizing: border-box;
+
+  }
+ 
+ .baseSoccerCountry{
+	box-sizing: border-box;
+  width: 230px;
+  height: 40px;
+  opacity: 0.9;
+  background-repeat: no-repeat;
+  background-image: -webkit-linear-gradient(rgba( 0, 0, 0, 1), rgba( 0, 0, 0, 1));
+  background-image: linear-gradient(rgba( 0, 0, 0, 1),rgba( 0, 0, 0, 1));
+  -moz-box-sizing: border-box;
+ }
+ .baseSpanish{
+	box-sizing: border-box;
+  width: 250px;
+  height: 200px;
+  background-position: -40px -20px;
+  background-image: url("../images/buttonImages/spanishFlag.jpg"), -webkit-linear-gradient(rgba( 238, 238, 238, 1), rgba( 238, 238, 238, 1));
+  background-image: url("../images/buttonImages/spanishFlag.jpg"), linear-gradient(rgba( 238, 238, 238, 1),rgba( 238, 238, 238, 1));
+  background-repeat: no-repeat;
+  -moz-box-sizing: border-box;
+    box-shadow: 10px 10px 5px #000000;
+	
+ }
+ 
+  .baseUK{
+	box-sizing: border-box;
+  width: 250px;
+  height: 200px;
+  background-position: -40px -20px;
+  background-image: url("../images/buttonImages/ukFlag.png"), -webkit-linear-gradient(rgba( 238, 238, 238, 1), rgba( 238, 238, 238, 1));
+  background-image: url("../images/buttonImages/ukFlag.png"), linear-gradient(rgba( 238, 238, 238, 1),rgba( 238, 238, 238, 1));
+  background-repeat: no-repeat;
+  -moz-box-sizing: border-box;
+    box-shadow: 10px 10px 5px #000000;
+	
+ }
+ 
+  .baseGermany{
+	box-sizing: border-box;
+  width: 250px;
+  height: 200px;
+  background-position: -40px -20px;
+  background-image: url("../images/buttonImages/germanyFlag.jpg"), -webkit-linear-gradient(rgba( 238, 238, 238, 1), rgba( 238, 238, 238, 1));
+  background-image: url("../images/buttonImages/germanyFlag.jpg"), linear-gradient(rgba( 238, 238, 238, 1),rgba( 238, 238, 238, 1));
+  background-repeat: no-repeat;
+  -moz-box-sizing: border-box;
+    box-shadow: 10px 10px 5px #000000;
+	
+ }
+ 
+ @media screen and (max-width: 800px) {
+	#container{
+		float:none;
+	}
+ }

@@ -1,0 +1,27 @@
+(function(userController){
+	var data= require("../data");
+	var query = require("querystring");
+	
+	userController.initialize = function(app){
+		app.post("/getUserVotes",function(req,res){
+			//console.log(req.params.league);
+			var sess= req.session;
+			if(sess.user =="" || sess.user==null){
+				res.redirect("/login");
+			}
+			var l = req.body.league.toString().toUpperCase();
+			data.getSportEvents(req.body,function(err,results){
+				if(err){console.log("error while updating vote");}
+				else{
+					
+					results.push({"user":sess.user});
+					res.send(results);
+					res.end();
+					/*res.send([{ "_id" : "53f034a3591b370b053e4f85", "eventName" : "Arsenal - Crystal Palace", "team1" : "Arsenal", "team2" : "Crystal Palace", "team1win" : 0.33, "team2win" : 0.33, "draw" : 0.34, "eventStartDateTime" : { "date" : "16/08/14", "time" : "13:00:00" }, "eventCategory" : "sports", "eventSubCategory0" : "soccer","eventSubCategory1" : "EPL", "votes" : [ ] }]);*/
+				
+				}
+			});
+		});
+	
+	};
+})(module.exports)
